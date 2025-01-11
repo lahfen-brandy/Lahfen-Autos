@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* COLORS */
+  --primary_500: rgb(63, 162, 255);
+
+  /* DIMENSION */
+  --max_width: 1400px;
+  --app_width: 95vw;
+  --rounded_5: 5px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* NAV */
+
+nav {
+  background-color: #00000055;
+  color: #ffffff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav .nav__content {
+  width: var(--app_width);
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#nav__logo,
+#nav__logo--mobile,
+#footer__logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  span {
+    color: var(--primary_500);
+  }
+
+  &#nav__logo--mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    &#nav__logo--mobile {
+      display: inline-block;
+    }
+
+    &#nav__logo {
+      display: none;
+    }
+  }
+}
+
+nav .nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+nav .nav__list li {
+  width: fit-content;
+  height: fit-content;
+}
+
+nav .nav__list li a {
+  display: inline-block;
+  padding: 10px 2rem;
+  border-radius: var(--rounded_5);
+}
+
+nav .nav__list--active-btn {
+  background-color: var(--primary_500);
+  color: #ffffff;
+}
+
+/* NEXT PAGE CALL TO ACTION SECTION */
+
+.visit-next {
+  width: var(--app_width);
+  max-width: var(--max_width);
+  margin: 6rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 13px 2.5rem;
+    border-radius: var(--rounded_5);
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 1.3rem;
+
+    .blue__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      transition: 300ms;
+      z-index: -1;
+    }
+
+    &:hover {
+      .blue__bg {
+        background-color: var(--primary_500);
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  height: fit-content;
+  padding: 3rem 0;
+}
+
+footer .section__1,
+footer .section__2 {
+  width: var(--app_width);
+  max-width: var(--max_width);
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &.section__1 {
+    gap: 2rem;
+  }
+
+  &.section__2 {
+    border-top: 1px solid gray;
+    margin-top: 2rem;
+    gap: 10px;
+  }
+}
+
+footer .section__1 {
+  .section__1--desc {
+    max-width: 500px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 10px;
+      line-height: 25px;
+    }
+  }
+
+  .footer__cta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer__cta button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: var(--rounded_5);
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+    }
+  }
+}
+
+footer .section__2 .socials {
+  a {
+    display: inline-block;
+    margin: 0 5px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+/* MEDIA QUERY FOR SMALL SCREENS */
+
+@media only screen and (max-width: 600px) {
+  nav .nav__list {
+    gap: 5px;
+  }
+
+  nav .nav__list li a {
+    padding: 5px 1rem;
+  }
+
+  footer .section__1,
+  footer .section__2 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* REMOVING DEFAULTS */
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

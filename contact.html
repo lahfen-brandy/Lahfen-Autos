@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./public/global.css">
+  <link rel="stylesheet" href="./assets/contact-page/styles/contact.css">
+  <title>Contact | Lahfen Auto</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__content">
+      <div id="nav__logo">Lahfen <span>Autos</span></div>
+      <div id="nav__logo--mobile">L <span>A</span></div>
+
+      <ol class="nav__list">
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./service.html">Service</a>
+        </li>
+        <li>
+          <a class="nav__list--active-btn" href="./contact.html">Contact</a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="contact__section">
+    <header class="section__1">
+      <h2>Reach out to us</h2>
+    </header>
+
+    <section class="section__2">
+      <form>
+        <div>
+          <input placeholder="First name" name="first-name" required>
+          <input placeholder="Last name" name="last-name">
+        </div>
+
+        <div>
+          <input placeholder="email" name="email" type="email" required>
+          <input placeholder="contact" name="contact">
+        </div>
+
+        <div class="gender__container">
+          <label for="gender">
+            Select Gender
+          </label>
+
+          <select name="gender" id="gender">
+            <option value="LEAVE_BLANK">Leave blank</option>
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+          </select>
+        </div>
+
+        <textarea name="comment" id="comment" placeholder="Leave a comment for us" cols="90" rows="9"></textarea>
+
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+
+      <div class="image__container">
+        <img src="./assets/contact-page/images/contact-page-img.png" alt="contact form image" />
+      </div>
+    </section>
+  </div>
+
+  <section class="visit-next">
+    <h2>
+      Go back to the home page
+    </h2>
+
+    <a href="./index.html">
+      <span class="blue__bg"></span>
+      Back to Home
+    </a>
+  </section>
+
+  <footer>
+    <section class="section__1">
+      <div class="section__1--desc">
+        <h2>Download our mobile app</h2>
+        <p>Get exclusive access to car rentals with our mobile app. Download now and experience convenience on the go.
+        </p>
+      </div>
+
+      <div class="footer__cta">
+        <button class="footer__cta--btn">
+          <img src="./public/images/apple-logo.png" alt="apple logo"/>
+          <div>
+            <span>Download on the</span>
+            <span>Apple Store</span>
+          </div>
+        </button>
+
+        <button class="footer__cta--btn">
+          <img src="./public/images/play-store.png" alt="google play logo" />
+          <div>
+            <span>Get it on</span>
+            <span>Google Play</span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section class="section__2">
+      <div id="footer__logo">Lahfen <span>Autos</span></div>
+
+      <div>
+        Copyright &#169; 2025
+      </div>
+
+      <div class="socials">
+        <a href="#">
+          <img src="./public/images/ig.png" alt="instagram" height="50" width="50" />
+        </a>
+        <a href="#">
+          <img src="./public/images/dribble.png" alt="dribble" height="50" width="50" />
+        </a>
+        <a href="#">
+          <img src="./public/images/x.png" alt="x" height="50" width="50" />
+        </a>
+        <a href="#">
+          <img src="./public/images/you-tube.png" alt="youtube" height="50" width="50" />
+        </a>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>
