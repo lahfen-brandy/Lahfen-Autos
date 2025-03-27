@@ -1,3 +1,3 @@
-# Welcome to Lahfen Autos
+# Welcome to Lahfen Auto
 
 - Visit live preview [here](lahfen-brandy.github.io/Lahfen-Autos)
